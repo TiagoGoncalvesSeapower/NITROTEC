@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="page-title" content="Resumo">
+  <title></title>
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/include.js"></script>
+  <script src="../assets/js/project-data.js"></script>
+  <script src="../assets/js/project-render.js"></script>
+</head>
+<body>
+
+<div id="header"></div>
+
+
+<main class="container content-wrap">
+
+  <!-- Tabs Navigation -->
+  <div class="tabs">
+    <button class="tab-button active" data-tab="context">Contexto</button>
+    <button class="tab-button" data-tab="objectives">Objetivos</button>
+    <button class="tab-button" data-tab="activities">Atividades</button>
+  </div>
+
+  <!-- CONTEXT TAB -->
+  <section id="tab-context" class="tab-section active">
+    <h2>Contexto</h2>
+
+    <p>
+      O projeto NITROTEC surge como uma resposta estratégica às crescentes necessidades de
+      autossuficiência na produção de materiais energéticos, particularmente os utilizados no
+      fabrico de munições, sentidas por quase todos os países da UE e da NATO.
+    </p>
+
+    <ul id="context-list"></ul>
+  </section>
+
+  <!-- OBJECTIVES TAB -->
+  <section id="tab-objectives" class="tab-section">
+    <h2>Objetivos do Projeto</h2>
+    <p>
+      O consórcio NITROTEC, que reúne parceiros industriais e académicos de reconhecida
+      excelência, com capacidades complementares, estabelece uma plataforma de colaboração 
+      orientada para a exploração de recursos naturais e tecnológicos, maximizando
+      a eficiência e o impacto dos esforços de investigação.
+      É no contexto da proposta de valor descrita que o projeto NITROTEC propõe-se a
+      atingir os seguintes objetivos:
+    </p>
+    <div id="objectives-container"></div>
+  </section>
+
+  <!-- ACTIVITIES TAB -->
+  <section id="tab-activities" class="tab-section">
+    <h2>Atividades</h2>
+    <p>
+      De forma genérica, de modo a garantir a integração adequada dos resultados dos
+      diferentes do projeto, bem como a minimizar o investimento total, o plano de trabalhos
+      de todas as atividades segue uma lógica que se estrutura em torno de três atividades de
+      investigação e desenvolvimento, uma atividade de gestão técnica e uma de disseminação
+      e exploração dos resultados. 
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Nº da Atividade</th>
+            <th>Designação da Atividade</th>
+            <th>Classificação</th>
+            <th>Promotor Responsável</th>
+          </tr>
+        </thead>
+        <tbody id="activities-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+
+<div id="footer"></div>
+
+<script>
+  loadHTML("header", "../partials/header.html");
+  loadHTML("footer", "../partials/footer.html");
+  initMobileNav();
+  renderProjectData();
+  renderContextSection();
+  renderActivitiesTable();
+  renderObjectivesSection();
+  initOverviewTabs();
+</script>
+
+</body>
+
+
+</html>
