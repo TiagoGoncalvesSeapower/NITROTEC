@@ -71,6 +71,6 @@ docker run --name nitrotec -p 8000:80 nitrotec-site
 
 ## Authors
 
-Contributors names and contact info
+Contributors names
 
 Tiago Rico Gonçalves
